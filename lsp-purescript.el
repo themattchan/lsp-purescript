@@ -7,14 +7,12 @@
 ;; URL: https://github.com/themattchan/lsp-purescript
 
 (require 'lsp-mode)
-;; (require 'cl-lib)
-;; (require 'json)
-;; (require 'font-lock)
-;; (require 'xref)
-;; (require 'dash)
 
 ;; assumes that purescript-language-server is installed globally
 ;; https://github.com/nwolverson/purescript-language-server
+
+;; enable it thusly:
+;; (add-hook 'purescript-mode #'lsp-purescript-enable)
 
 (lsp-define-stdio-client lsp-purescript ; name
                          "purescript"   ; language-id
@@ -25,5 +23,3 @@
                                                   "\\(package\\|bower\\)\\.json")))
                          '("purescript-language-server" "--stdio")
                          )
-                         ;; :command-fn #'lsp-rust--rls-command
-                         ;; :initialize #'lsp-rust--initialize-client)
