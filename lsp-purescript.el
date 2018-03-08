@@ -7,6 +7,7 @@
 ;; URL: https://github.com/themattchan/lsp-purescript
 
 (require 'lsp-mode)
+(require 'lsp-common)
 
 ;; assumes that purescript-language-server is installed globally
 ;; https://github.com/nwolverson/purescript-language-server
@@ -23,3 +24,6 @@
                                                   "\\(package\\|bower\\)\\.json")))
                          '("purescript-language-server" "--stdio")
                          )
+
+(provide 'lsp-purescript)
+;;; lsp-purescript.el ends here
